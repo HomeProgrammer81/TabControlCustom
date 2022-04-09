@@ -14,7 +14,7 @@ namespace TabControlCustom
 
             // 先頭のタブの設定
             TabItem item = (TabItem)TabControlAddDel.Items.GetItemAt(0);
-            item.Header = "タブ1";
+            item.Header = new TabHeaderUserControl(1);
             item.Content = new TabItemUserControl(1);
         }
 
@@ -31,7 +31,7 @@ namespace TabControlCustom
             {
                 // 追加するタブの設定
                 TabItem item = new TabItem();
-                item.Header = "タブ" + count;
+                item.Header = new TabHeaderUserControl(count);
                 item.Content = new TabItemUserControl(count);
 
                 // 追加ボタンの前にタブを追加
